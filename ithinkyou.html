@@ -53,7 +53,8 @@
     </style>
 </head>
 <body>
-
+    <audio id="page-audio" src="apparently.mp3"></audio>
+	
     <div class="content">
 	<div class="countdown" id="countdown"></div>
 	    
@@ -116,6 +117,15 @@
     </div>
 
     <script>
+	// audio
+	window.addEventListener('load', function() {
+            const audio = document.getElementById('page-audio');
+            audio.play().catch((error) => {
+                console.log('Audio autoplay failed: ', error);
+            });
+        });
+
+	//countdown
         const countdownElement = document.getElementById('countdown');
         const targetDate = new Date('Feb 10, 2025 00:00:00').getTime();
 
