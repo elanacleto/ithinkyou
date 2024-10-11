@@ -49,11 +49,24 @@
             margin-right: 10px;
             border-radius: 5px;
         }
+
+	.audio-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
 	    
     </style>
 </head>
 <body>
     <audio id="page-audio" src="apparently.mp3"></audio>
+    
+    <img src="kid.png" alt="Play Audio" class="audio-button" id="audioButton">
 	
     <div class="content">
 	<div class="countdown" id="countdown"></div>
@@ -118,10 +131,10 @@
 
     <script>
 	// audio
-	window.addEventListener('load', function() {
+	document.getElementById('audioButton').addEventListener('click', function() {
             const audio = document.getElementById('page-audio');
             audio.play().catch((error) => {
-                console.log('Audio autoplay failed: ', error);
+                console.log('Audio play failed: ', error);
             });
         });
 
