@@ -42,6 +42,21 @@
         .entry {
             margin-bottom: 20px;
         }
+
+	.entry-image {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+	@media (max-width: 768px) {
+            body {
+                background-size: contain;
+                background-attachment: scroll;
+            }
+        }
+	    
     </style>
 </head>
 <body>
@@ -97,7 +112,14 @@
 
 	<div class="entry">
             <span class="date">10/9/2024:</span> when i bought the wrong kind of frozen potstickers from meijer, you'd have known which to get
-        </div>	    
+        </div>
+
+	<div class="entry">
+    	    <span class="date">10/10/2024:</span> 
+    	    <img src="diggy_moon.png" alt="A description of the image" class="entry-image">
+    	    all day. today one more reason to love the moon
+	</div>
+
     </div>
 
     <script>
